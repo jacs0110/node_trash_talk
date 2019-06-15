@@ -28,8 +28,6 @@ function generateMessage(options) {
     message['phrase'] = phrase[Math.floor(Math.random() * phrase.length)]
   }
 
-  // console.log(options)
-  // console.log(message)
   return message
 }
 

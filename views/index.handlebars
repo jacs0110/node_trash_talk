@@ -3,44 +3,56 @@
     <div class="col-12 col-lg-10 col-xl-8 mx-auto">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Trash Talk Generator </h5>
+          <h5 class="card-title">你想對誰說幹話？ </h5>
           <hr>
           <form method="POST" action="/">
-            <div class="form-group form-row mb-2 align-items-center">
-              <label for="engineer" class="col-md-4 col-form-label">Engineer</label>
-              <div class="col-md-8">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="engineer" name="engineer">
-                  <label class="custom-control-label" for="engineer">Engineer</label>
-                </div>
-              </div>
-            </div>
+            <div class="d-flex justify-content-around">
+              <div class="col-md-4">
+                <div class="img_container">
+                  <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                    class="img-thumbnail" alt="...">
+                  {{!-- <label for="engineer" class="col-md-4 col-form-label">Engineer</label> --}}
 
-            <div class="form-group form-row mb-2 align-items-center">
-              <label for="designer" class="col-md-4 col-form-label">Designer</label>
-              <div class="col-md-8">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="designer" name="designer">
-                  <label class="custom-control-label" for="designer">Designer</label>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="engineer" name="engineer">
+                    <label class="custom-control-label" for="engineer">工程師</label>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="form-group form-row mb-2 align-items-center">
-              <label for="entrepreneur" class="col-md-4 col-form-label">Entrepreneur</label>
-              <div class="col-md-8">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="entrepreneur" name="entrepreneur">
-                  <label class="custom-control-label" for="entrepreneur">Entrepreneur</label>
+              <div class="col-md-4">
+                <div class="img_container">
+                  <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                    class="img-thumbnail" alt="...">
+                  {{!-- <label for="designer" class="col-md-4 col-form-label">Designer</label> --}}
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="designer" name="designer">
+                    <label class="custom-control-label" for="designer">設計師</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="img_container">
+                  <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                    class="img-thumbnail" alt="...">
+                  {{!-- <label for="entrepreneur" class="col-md-4 col-form-label">Entrepreneur</label> --}}
+
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="entrepreneur" name="entrepreneur">
+                    <label class="custom-control-label" for="entrepreneur">創業家</label>
+                  </div>
                 </div>
               </div>
             </div>
-            {{#if message.role}}
-            <div class="alert alert-info" role="alert">
-              <span class="mr-2">身為一個 {{message.role}}，{{message.task}} {{message.phrase}} 吧！</span>
+            <div class="result_container">
+              <button class="btn btn-success" type="submit">產生幹話</button>
+              {{#if message.role}}
+              <span class="alert alert-info" role="alert">
+                <span class="mr-2">身為一個 {{message.role}}，{{message.task}} {{message.phrase}} 吧！</span>
+              </span>
+              {{/if}}
             </div>
-            {{/if}}
-            <button class="btn btn-success" type="submit">Generate Trash Messages</button>
           </form>
         </div>
       </div>

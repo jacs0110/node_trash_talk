@@ -10,6 +10,9 @@ const port = 3000
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
+// setting static files
+app.use(express.static('public'))
+
 // set body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
 
