@@ -2,6 +2,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
+const generateMessage = require('./generate_message')
 const app = express()
 const port = 3000
 
@@ -15,6 +16,11 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // routes
 app.get('/', (req, res) => {
   res.render('index')
+})
+
+app.post('/', (req, res) => {
+  let message = generateMessage(req.body)
+  res.render('index', { message: message })
 })
 
 

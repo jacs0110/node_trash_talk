@@ -1,1 +1,49 @@
-<h1>Hello world</h1>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Trash Talk Generator </h5>
+          <hr>
+          <form method="POST" action="/">
+            <div class="form-group form-row mb-2 align-items-center">
+              <label for="engineer" class="col-md-4 col-form-label">Engineer</label>
+              <div class="col-md-8">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="engineer" name="engineer">
+                  <label class="custom-control-label" for="engineer">Engineer</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group form-row mb-2 align-items-center">
+              <label for="designer" class="col-md-4 col-form-label">Designer</label>
+              <div class="col-md-8">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="designer" name="designer">
+                  <label class="custom-control-label" for="designer">Designer</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group form-row mb-2 align-items-center">
+              <label for="entrepreneur" class="col-md-4 col-form-label">Entrepreneur</label>
+              <div class="col-md-8">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="entrepreneur" name="entrepreneur">
+                  <label class="custom-control-label" for="entrepreneur">Entrepreneur</label>
+                </div>
+              </div>
+            </div>
+            {{#if message.role}}
+            <div class="alert alert-info" role="alert">
+              <span class="mr-2">身為一個 {{message.role}}，{{message.task}} {{message.phrase}} 吧！</span>
+            </div>
+            {{/if}}
+            <button class="btn btn-success" type="submit">Generate Trash Messages</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
