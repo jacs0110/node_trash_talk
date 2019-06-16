@@ -2,7 +2,7 @@
 
 This is a web appliaction built by Node.js, Express.js, express-handlebars, and body-parser.
 
-![screenshot](https://www.dropbox.com/s/5qifg4e5vkk1nzd/Screenshot%202019-06-16%2011.01.04.png?dl=0)
+![screenshot](https://www.dropbox.com/s/5qifg4e5vkk1nzd/Screenshot%202019-06-16%2011.01.04.png)
 
 ### Key Features
 1. User can select different character for trash talk (one character each time)
