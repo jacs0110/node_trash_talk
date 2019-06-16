@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   let message = generateMessage(req.body)
+  console.log(req.body)
   res.render('index', { message: message })
 })
 

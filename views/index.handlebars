@@ -8,48 +8,49 @@
           <form method="POST" action="/">
             <div class="d-flex justify-content-around">
               <div class="col-md-4">
-                <div class="img_container">
+                <div class="choice_container">
                   <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
                     class="img-thumbnail" alt="...">
                   {{!-- <label for="engineer" class="col-md-4 col-form-label">Engineer</label> --}}
 
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="engineer" name="engineer">
+                  <div class="custom-control">
+                    <input type="radio" name="role" class="custom-control-input" id="engineer" value="engineer">
                     <label class="custom-control-label" for="engineer">工程師</label>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-4">
-                <div class="img_container">
+                <div class="choice_container">
                   <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
                     class="img-thumbnail" alt="...">
                   {{!-- <label for="designer" class="col-md-4 col-form-label">Designer</label> --}}
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="designer" name="designer">
+                  <div class="custom-control">
+                    <input type="radio" name="role" class="custom-control-input" id="designer" value="designer">
                     <label class="custom-control-label" for="designer">設計師</label>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-4">
-                <div class="img_container">
+                <div class="choice_container">
                   <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
                     class="img-thumbnail" alt="...">
                   {{!-- <label for="entrepreneur" class="col-md-4 col-form-label">Entrepreneur</label> --}}
 
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="entrepreneur" name="entrepreneur">
+                  <div class="custom-control">
+                    <input type="radio" name="role" class="custom-control-input" id="entrepreneur" value="entrepreneur">
                     <label class="custom-control-label" for="entrepreneur">創業家</label>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="result_container">
-              <button class="btn btn-success" type="submit">產生幹話</button>
-              {{#if message.role}}
+              <button class="btn btn-primary" type="submit">產生幹話</button>
+              {{#if message}}
               <span class="alert alert-info" role="alert">
-                <span class="mr-2">身為一個 {{message.role}}，{{message.task}} {{message.phrase}} 吧！</span>
+                <span class="mr-2"> {{message}} </span>
               </span>
               {{/if}}
             </div>
